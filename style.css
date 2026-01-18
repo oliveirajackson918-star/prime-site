@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografia e cores principais */
+body {
+  font-family: Arial, sans-serif;
+  color: #003366;
+  background: #f8f8f8;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background: #003366;
+  padding: 15px 0;
+  color: white;
+  font-weight: bold;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* Hero */
+.hero {
+  background: #0055a5;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #D4AF37;
+  color: white;
+}
+
+.btn-secondary {
+  border: 2px solid #003366;
+  color: #003366;
+  background: white;
+}
+
+/* Seções */
+.section {
+  padding: 40px 0;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nota {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background: #003366;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
