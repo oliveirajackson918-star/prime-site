@@ -1,12 +1,321 @@
+<think>
+Primeiro, o usuário pediu para criar um site institucional para "Prime Incorporações". Preciso gerar um único arquivo index.html que seja estático, usando HTML e CSS, responsivo (mobile first), com SEO básico.
+
+
+## Interpreting user request  
+- The user asked for a static website for "Prime Incorporações," specifically an index.html file.  
+- The site needs to be responsive, following a mobile-first approach, and use HTML and CSS.
+</think>```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Prime Incorporações – Projeto Conceitual</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Incorporações - Construindo o Futuro com Excelência</title>
+    <meta name="description" content="Prime Incorporações: Incorporadora imobiliária especializada em empreendimentos de alta qualidade para famílias e investidores. Conheça nossos projetos e entre em contato.">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* Cores: Branco, cinza, dourado (#D4AF37), azul escuro (#003366) */
+
+        /* Header */
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #D4AF37;
+        }
+
+        /* Seções */
+        section {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #003366;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Home */
+        #home {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        #home h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #D4AF37;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #B8860B;
+        }
+
+        /* Quem Somos */
+        #quem-somos {
+            background-color: #fff;
+        }
+
+        #quem-somos ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #quem-somos li {
+            margin-bottom: 1rem;
+        }
+
+        /* Empreendimentos */
+        #empreendimentos {
+            background-color: #f9f9f9;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Diferenciais */
+        #diferenciais {
+            background-color: #fff;
+        }
+
+        #diferenciais ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #diferenciais li {
+            width: 100%;
+            max-width: 300px;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        /* Contato */
+        #contato {
+            background-color: #f9f9f9;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Responsividade */
+        @media (min-width: 768px) {
+            .cards {
+                justify-content: space-around;
+            }
+
+            .card {
+                width: 45%;
+            }
+
+            #diferenciais ul {
+                justify-content: space-around;
+            }
+
+            #diferenciais li {
+                width: 30%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .card {
+                width: 30%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Prime Incorporações</h1>
-  <p>Projeto conceitual de redesign para estudo em marketing digital.</p>
+    <header>
+        <h1>Prime Incorporações</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#empreendimentos">Empreendimentos</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Construindo o Futuro com Excelência</h2>
+        <p>Especializados em empreendimentos imobiliários de alta qualidade, oferecemos soluções para famílias e investidores que buscam segurança, conforto e rentabilidade.</p>
+        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20empreendimentos." class="btn" target="_blank">Fale Conosco no WhatsApp</a>
+    </section>
+
+    <section id="quem-somos">
+        <h2>Quem Somos</h2>
+        <p>A Prime Incorporações foi fundada em 2010 com o compromisso de transformar sonhos em realidade através de projetos imobiliários inovadores e sustentáveis. Com mais de uma década de experiência, nos destacamos pela excelência em construção e atendimento personalizado.</p>
+        <h3>Missão</h3>
+        <p>Desenvolver empreendimentos imobiliários que atendam às necessidades de nossos clientes, promovendo qualidade de vida e valorização patrimonial.</p>
+        <h3>Visão</h3>
+        <p>Ser referência nacional em incorporação imobiliária, reconhecida pela inovação, sustentabilidade e confiança.</p>
+        <h3>Valores</h3>
+        <ul>
+            <li><strong>Integridade:</strong> Atuamos com transparência e ética em todas as nossas ações.</li>
+            <li><strong>Qualidade:</strong> Comprometimento com materiais e processos de alta qualidade.</li>
+            <li><strong>Inovação:</strong> Buscamos constantemente soluções modernas para nossos projetos.</li>
+            <li><strong>Sustentabilidade:</strong> Respeitamos o meio ambiente em nossas construções.</li>
+        </ul>
+    </section>
+
+    <section id="empreendimentos">
+        <h2>Empreendimentos</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Residencial+Prime+Park" alt="Residencial Prime Park">
+                <h3>Residencial Prime Park</h3>
+                <p>Condomínio fechado com apartamentos de 2 e 3 quartos, localizado em área nobre da cidade. Ideal para famílias que buscam conforto e segurança.</p>
+                <a href="#contato" class="btn">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Vila+Prime+Gardens" alt="Vila Prime Gardens">
+                <h3>Vila Prime Gardens</h3>
+                <p>Casas térreas e sobrados em condomínio com infraestrutura completa. Perfeito para investidores em busca de rentabilidade.</p>
+                <a href="#contato" class="btn">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Edifício+Prime+View" alt="Edifício Prime View">
+                <h3>Edifício Prime View</h3>
+                <p>Apartamentos com vista panorâmica, acabamentos de luxo e localização estratégica. O primeiro imóvel dos seus sonhos.</p>
+                <a href="#contato" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="diferenciais">
+        <h2>Diferenciais</h2>
+        <ul>
+            <li><strong>Qualidade Garantida:</strong> Utilizamos materiais de primeira linha e acompanhamos cada etapa da construção.</li>
+            <li><strong>Localização Estratégica:</strong> Nossos empreendimentos estão em áreas valorizadas e com infraestrutura completa.</li>
+            <li><strong>Atendimento Personalizado:</strong> Equipe dedicada para orientar e acompanhar nossos clientes.</li>
+            <li><strong>Sustentabilidade:</strong> Projetos com foco em eficiência energética e respeito ao meio ambiente.</li>
+            <li><strong>Financiamento Facilitado:</strong> Parcerias com bancos para oferecer condições especiais de pagamento.</li>
+            <li><strong>Valorização Patrimonial:</strong> Investimentos que geram retorno a longo prazo.</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para conhecer nossos empreendimentos e tirar suas dúvidas. Estamos à disposição para ajudar a realizar seu sonho imobiliário.</p>
+        <form action="#" method="post">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <input type="tel" name="telefone" placeholder="Seu Telefone" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+        <p>Telefone: (11) 9999-9999 | E-mail: contato@primeincorporacoes.com.br</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Prime Incorporações. Todos os direitos reservados.</p>
+        <p>Desenvolvido com dedicação para oferecer o melhor em imóveis.</p>
+    </footer>
 </body>
 </html>
+```
